@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/55174c58a9.js"
+      crossorigin="anonymous"></script>
+    <title>Degen desktop</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="folder-window-wrapper">
+        <!-- Window controls (expand, close, minimize) -->
+        <div class="window-controls">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Left side of window (list of lists) -->
+        <aside class="list-of-lists-section">
+          <div class="header-wrapper">
+            <h2>All Lists</h2>
+            <button class="add-button">
+              <i class="fa-light fa-plus"></i>New list
+            </button>
+          </div>
+
+          <form>
+            <input
+              type="text"
+              class="form-input"
+              id="list-input"
+              name="item"
+              placeholder="Create list" />
+          </form>
+
+          <ul id="list-of-lists" class="list">
+            <li>
+              Favourite sports teams
+              <button><i class="fa-light fa-trash-can"></i></button>
+            </li>
+            <li>
+              Cute animals i like
+              <button><i class="fa-light fa-trash-can"></i></button>
+            </li>
+            <li>
+              Shopping list
+              <button><i class="fa-light fa-trash-can"></i></button>
+            </li>
+            <li>
+              Fruits I'm allergic to
+              <button><i class="fa-light fa-trash-can"></i></button>
+            </li>
+            <li>
+              New year's resolutions
+              <button><i class="fa-light fa-trash-can"></i></button>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Right side of window (The to-do lists) -->
+        <main class="list-section">
+          <div class="header-wrapper">
+            <form>
+              <input
+                class="heading-input"
+                type="text"
+                id="header-input"
+                value="Favourite sports teams" />
+            </form>
+
+            <button class="add-button">
+              <i class="fa-light fa-plus"></i>New item
+            </button>
+          </div>
+
+          <form>
+            <input
+              type="text"
+              class="form-input"
+              id="item-input"
+              name="item"
+              placeholder="Create Item" />
+          </form>
+
+          <!-- List of tasks -->
+          <ul id="list-of-things" class="list">
+            <li>
+              <input class="checkmark" type="checkbox" />Degen Frogs<button>
+                <i class="fa-light fa-trash-can"></i>
+              </button>
+            </li>
+            <li>
+              <input class="checkmark" type="checkbox" />DOGE Ballers<button>
+                <i class="fa-light fa-trash-can"></i>
+              </button>
+            </li>
+            <li>
+              <input class="checkmark" type="checkbox" />Shadow Sneks<button>
+                <i class="fa-light fa-trash-can"></i>
+              </button>
+            </li>
+            <li>
+              <input class="checkmark" type="checkbox" />Rocket Inu<button>
+                <i class="fa-light fa-trash-can"></i>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Completed tasks -->
+          <div class="completed-list">
+            <ul id="completed-things" class="list">
+              <li><input type="checkbox" />Wif Bonanza</li>
+              <li><input type="checkbox" />Floki Sniffers</li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Stupid folders on desktop -->
+  </body>
+</html>
