@@ -51,7 +51,7 @@ li {
   position: relative;
   z-index: 10;
   min-width: 900px;
-  min-height: 300px;
+  height: 600px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
