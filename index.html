@@ -67,27 +67,23 @@
         <!-- Right side of window (The to-do lists) -->
         <main class="list-section">
           <div class="header-wrapper">
-            <form>
-              <input
-                class="heading-input"
-                type="text"
-                id="header-input"
-                value="Favourite sports teams" />
-            </form>
+            <input
+              class="heading-input"
+              type="text"
+              id="header-input"
+              value="Favourite sports teams" />
 
-            <button class="add-button">
+            <button class="add-button" id="new-item-button">
               <i class="fa-light fa-plus"></i>New item
             </button>
           </div>
 
-          <form>
-            <input
-              type="text"
-              class="form-input"
-              id="item-input"
-              name="item"
-              placeholder="Create Item" />
-          </form>
+          <input
+            type="text"
+            class="form-input"
+            id="item-input"
+            name="item"
+            placeholder="Create Item" />
 
           <!-- List of tasks -->
           <ul id="list-of-things" class="list">

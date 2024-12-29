@@ -98,6 +98,14 @@ li {
   padding: var(--larger-padding) var(--base-padding);
 }
 
+#list-input {
+  display: none;
+}
+
+#item-input {
+  display: none;
+}
+
 .list-of-lists-section h2 {
   padding-top: 3px;
   padding-left: 3px;
