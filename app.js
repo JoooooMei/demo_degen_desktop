@@ -11,8 +11,8 @@ newListButton.addEventListener('click', () => {
 
 // Vad som händer när man klickar på knappen "+ New item"
 newItemButton.addEventListener('click', () => {
-  newItemInput.style.display = 'block'; // Visa item input
-  newItemInput.value = ''; // Rensa item input
+  newItemInput.style.display = 'block'; // Visa inputfält
+  newItemInput.value = ''; // Rensa inputfältet
 });
 
 // Kod nedan får nog skrivas om. Listan ska hålla objekt eller listor
