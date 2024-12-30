@@ -51,7 +51,8 @@ li {
   position: relative;
   z-index: 10;
   min-width: 900px;
-  height: 600px;
+  min-height: 600px;
+  height: fit-content;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
@@ -90,7 +91,6 @@ li {
 }
 
 .list-of-lists-section {
-  height: 100%;
   min-width: 350px;
   background-color: #e0d8d8c4;
   backdrop-filter: blur(30px);
@@ -127,30 +127,32 @@ li {
 
 .list li {
   display: flex;
-
   align-items: center;
-  padding: 2px 3px;
+  /* padding: 2px 3px; */
   border-radius: 3px;
 }
 
-.list li button {
-  margin-left: auto;
+.icons-wrapper {
+  display: flex;
+  visibility: hidden;
 }
 
-.fa-trash-can {
-  display: block;
-  visibility: hidden;
+.list li .icons-wrapper {
+  margin-left: auto;
 }
 
 .fa-trash-can:hover {
   color: red;
+}
+.fa-pen-to-square:hover {
+  color: var(--special-color);
 }
 
 .list li:hover {
   background-color: var(--shade-color);
 }
 
-.list li:hover .fa-trash-can {
+.list li:hover .icons-wrapper {
   visibility: visible;
   cursor: pointer;
 }
