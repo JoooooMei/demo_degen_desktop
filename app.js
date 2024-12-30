@@ -1,34 +1,7 @@
-// const newListButton = document.querySelector('#new-list-button');
-// const newItemButton = document.querySelector('#new-item-button');
-// const newListForm = document.querySelector('#list-input');
-// const newItemForm = document.querySelector('#item-input');
-
-// // Vad som händer när man klickar på knappen "+ New List"
-// newListButton.addEventListener('click', () => {
-//   newListForm.style.display = 'block'; // Formuläret visas
-//   newListForm.value = ''; // Imput value sätts till defaiult (Kanske inte nödvändigt??)
-// });
-
-// const list = [];
-// // Vad som händer när man skapar ny lista via form
-// newListForm.addEventListener('keydown', (e) => {
-//   e.preventDefault();
-//   const value = newListForm.value;
-
-//   list.push(value);
-//   console.log(list);
-// });
-
-// newItemButton.addEventListener('click', () => {
-//   newItemForm.style.display = 'block';
-//   newListForm.preventDefault(); // Detta skam ingte vara här!
-//   newListForm.value = '';
-// });
-
 const newListButton = document.querySelector('#new-list-button');
 const newItemButton = document.querySelector('#new-item-button');
-const newListInput = document.querySelector('#list-input'); // Bytt till input
-const newItemInput = document.querySelector('#item-input'); // Bytt till input
+const newListInput = document.querySelector('#list-input');
+const newItemInput = document.querySelector('#item-input');
 
 // Vad som händer när man klickar på knappen "+ New List"
 newListButton.addEventListener('click', () => {
@@ -36,25 +9,29 @@ newListButton.addEventListener('click', () => {
   newListInput.value = ''; // Rensa inputfältet
 });
 
+// Vad som händer när man klickar på knappen "+ New item"
+newItemButton.addEventListener('click', () => {
+  newItemInput.style.display = 'block'; // Visa item input
+  newItemInput.value = ''; // Rensa item input
+});
+
+// Kod nedan får nog skrivas om. Listan ska hålla objekt eller listor
 const list = [];
 
 // När användaren trycker på Enter i inputfältet
 newListInput.addEventListener('keydown', (e) => {
+  // Keydown = valfri tangent trycks
   if (e.key === 'Enter') {
-    e.preventDefault(); // Förhindra sidladdning
+    // Om tangenten är enter
+    e.preventDefault(); // Förhindra at formuläret försöker skickas / sidan läses in igen
     const value = newListInput.value;
 
     if (value.trim() !== '') {
+      // Kontrollerar så input inte är tom. Kanske lite bakväd undantagshantering men jag tyckte det var smart.
+      // Dock får man ingen feedbak på vad man gjort fel men jag tycker det är överflödigt här.
       list.push(value); // Lägg till värdet i listan
-      console.log(list);
-      newListInput.value = ''; // Nollställ inputfältet
-      newListInput.style.display = 'none'; // Dölj input efter inmatning
+      newListInput.value = ''; // Nollställ inputfältet (Kanske onödigt?)
+      newListInput.style.display = 'none'; // Dölj input-fältet efter inmatning
     }
   }
-});
-
-// Klick på "+ New Item" knappen
-newItemButton.addEventListener('click', () => {
-  newItemInput.style.display = 'block'; // Visa item input
-  newItemInput.value = ''; // Rensa item input
 });
