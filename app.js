@@ -30,6 +30,7 @@ newListInput.addEventListener('keydown', (e) => {
       // Kontrollerar så input inte är tom. Kanske lite bakväd undantagshantering men jag tyckte det var smart.
       // Dock får man ingen feedbak på vad man gjort fel men jag tycker det är överflödigt här.
       list.push(value); // Lägg till värdet i listan
+      console.log(list);
       newListInput.value = ''; // Nollställ inputfältet (Kanske onödigt?)
       newListInput.style.display = 'none'; // Dölj input-fältet efter inmatning
     }
